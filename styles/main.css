@@ -1,3 +1,139 @@
 @import "./reset.css";
 
 /* usaremos CSS anidado :) */
+
+/*Estilos anidados para la sección de recetas de la página plátano de Canarias*/
+
+#cuarta-seccion-recetas{
+    background-image: url(https://platanodecanarias.es/wp-content/uploads/2016/10/pdc-inicio-recetas-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding-bottom: 30px;
+    margin: 20px auto 25px auto;
+
+    .titulo-seccion-recetas > h2 {
+        display: block; /*quiero que ocupe todo el ancho del que dispone y lo demás comience en una nueva línea*/
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 40px;
+        margin: 40px auto;
+    }
+    .articulos-recetas {
+        display: flex;
+        flex-wrap: wrap; /*Quiero que cuando yo haga más grande la pantalla se vean hacia abajo ocupando lo que me permita el ancho de página*/
+        justify-content: center;    
+        flex-direction: row;
+        /*gap: 15px;*/
+        width: 100%;
+        height: 350px;
+        
+        & article { /*Cambio! antes estaba puesto article no & article eso es porque se supone que entiende al estar anidado que viene del anterior pero para elementos como article?*/
+            background-color: #fff;
+            min-height: 1px;
+            margin-bottom: 40px;
+            display: flex; /*Cada artículo tiene una disposición flex, en la que su contenido se visualiza en forma de columna*/
+            flex-direction: column;
+            align-items: center;
+            width: 210px;
+            height: auto;
+            margin-left: 9px;
+            margin-right: 9px;
+
+            img {
+                display: block; /*Ocupa el ancho del padre que es el que tiene disponible y comienza el siguiente contenido en una nueva línea*/
+                width: auto;
+                height: auto;
+                margin-bottom: 5px;
+            }
+
+            a > .receta {/*Ruta más específica para llegar a los h3*/
+                display: block;
+                min-height: 60px;
+                max-height: 60px;
+                max-width: 210px;
+                min-width: 209px;
+                color: #002856;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                padding-left: 20px;
+                padding-right: 20px;
+                line-height: 1.1;
+                word-break: break-word; /*me corta la palabra*/
+                /*display: -webkit-box;
+                -webkit-line-clamp: 2;
+                line-clamp: 2;  Limita a 2 líneas de texto (ajustable según tus necesidades) */
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+
+            /*Con el hover en .receta que es la clase del h3 hago que cuando ponga el cursor el texto se ponga subrayado*/
+            .receta:hover {
+                text-decoration: underline;
+            }
+
+
+            .boton-receta {
+                display: block; /*Revisar cuando pongo más texto me rueda el botón y como ambos botones están con padding y margin disitntos no están alineados*/
+                color: #002856;
+                background-color: #ffd100;
+                font-size: 14px;
+                font-weight: bold;
+                padding: 5px 10px 5px 10px;
+                text-transform: uppercase;
+                margin-top: 5px;
+                margin-bottom: 20px;
+
+                /*&.batido {
+                    margin-top: px;
+
+                }*/
+            }
+
+            /*Quiero modificar mi margin de mi primer boton el de batidos
+            pero consigo que se resuelva el problema momentaneamente
+            TENDRÍA QUE MODIFICAR MI ESTRUCTURA HTML PARA HACER UN CONTENEDOR PARA LA IMAGEN, EL H3 Y EL ENLACE?*/
+
+            /*Con este hover hago el cambio de color de los botones cuando paso el cursor por encima*/
+            .boton-receta:hover {
+                color: #ffd100;
+                background-color: #002856;
+            }
+        }   
+    }
+
+    .boton-mas-recetas{
+        display: block;
+        color: #002856;
+        background-color: #ffd100;
+        font-size: 14px;
+        font-weight: bold;
+        /*margin-top: 5px;
+        margin-bottom: 5px;*/
+        padding: 10px 15px 10px 15px;
+        width: 200px;
+        margin: 0 auto; 
+         
+    }
+    .boton-mas-recetas:hover {
+        color: #ffd100;
+        background-color: #002856;
+    }
+
+}
+
+
+
+
+
+   
+ 
