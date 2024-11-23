@@ -1,3 +1,149 @@
 @import "./reset.css";
 
 /* usaremos CSS anidado :) */
+
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: bolder;
+  text-align: center;
+  color: #002855;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  text-transform: uppercase;
+}
+
+/* Contenedor de noticias */
+.noticias-contenedor {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Espacio entre las tarjetas */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px ; 
+}
+
+/* Tarjetas de noticias */
+.noticia {
+  background-color:#dfdfdf;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: calc(33.333% - 30px); /* Tres columnas */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.noticia img {
+  width: 100%;
+  height: 180px;
+  object-fit:cover;
+}
+
+.noticia time {
+  font-size: 0.80rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #002855;
+  margin: 15px 15px 5px;
+  display: block;
+  text-transform: uppercase; /* Convertir texto a mayúsculas */
+}
+
+/* Encabezados de noticias (h3) */
+.noticia h3 {
+  font-size: 1.1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 5px 15px 10px;
+  line-height: 1.4;
+}
+
+.noticia h3 a {
+  text-decoration: none;
+  color: #002855;
+  transition: all 0.3s;
+}
+
+.noticia h3 a:hover {
+  text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+/* Descripción de la noticia */
+.noticia p {
+  font-size: 0.9rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: #002855;
+  margin: 0 20px 10px;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* Botón "Leer más" */
+.noticia a.leer-mas {
+  display: block;
+  margin: auto auto 15px;
+  padding: 15px 20px 10px;
+  background-color: #f7c000;
+  color: #002855;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s;
+  width: fit-content;
+  font-size: 1.2rem;
+}
+
+.noticia a.leer-mas:hover {
+  background-color: #002855;
+  color: #f7c000;
+}
+
+/* Botón "Quiero ver más" */
+.ver-mas {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.ver-mas a {
+  display: inline-block;
+  padding: 15px 40px 10px;
+  background-color: #f7c000;
+  color: #002855;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.ver-mas a:hover {
+  background-color: #002855;
+  color: #f7c000;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .noticia {
+    width: calc(50% - 20px); /* Dos columnas en pantallas medianas */
+  }
+}
+
+@media (max-width: 480px) {
+  .noticia {
+    width: 100%; /* Una columna en pantallas pequeñas */
+  }
+}
