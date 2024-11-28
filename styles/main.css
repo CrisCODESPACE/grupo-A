@@ -1,3 +1,87 @@
 @import "./reset.css";
+#platano{
+    background-image:url(/Img/platano-es-01.jpg); /*la imagen de fondo de la section*/
+    background-size: cover;/* hace que la imagen cubra toda la secction*/
+    background-position: center;/* centra la imagen*/
+    background-repeat: no-repeat;/*hace que no se repita*/
+    padding-bottom: 30%; /*crea un relleno proporcional al ancho*/
+    position: relative; /*establece una posicion relativa*/
 
-/* usaremos CSS anidado :) */
+    
+}
+
+
+
+.logo {
+    position: relative; /* Coloca la imagen fuera del flujo normal de la página */ 
+    top: 20px;
+    left: 0;
+    transition: transform 0.3s ease; /* Agrega transición suave para el efecto */
+    transform: translateX(-71%); /* Desplaza la imagen hacia la izquierda para ocultar la mitad */
+}
+
+
+.logo:hover {
+  
+transform: translateX(0); /* Mueve la imagen para mostrarla completa */
+}
+
+.platano-es{
+    background-color: rgba(39, 34, 99, 0.377); /*aplica un fondo semitransparente*/
+
+}
+
+.platano-es{
+    position:absolute ; /*define una posicion absoluta*/
+    top:50% ;
+    left:50% ;
+    width: 50%;
+
+}
+
+.ver-mas{
+    color: #0028569f azul;
+    background-color: #ffd100;
+    font-size: 14px;/*ajusta el tamaño del texto*/
+    font-weight: bold; /*engrusa el texto*/
+    padding: 5px 10px 5px 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.texto{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.point{
+    font-size: 25px;
+    color: rgba(22, 18, 18, 0.466);
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    list-style: none;
+    
+}
+
+.point li{
+    display: inline;
+}
+
+.point-1:hover{
+    color:#ffd100;
+    
+}
+.point-2:hover{
+    color:#ffd100;
+    
+}
+.point-3:hover{
+    color:#ffd100;
+    
+}
+.point-4:hover{
+    color:#ffd100;
+    
+}
