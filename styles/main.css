@@ -7,6 +7,72 @@
     padding-bottom: 30%; /*crea un relleno proporcional al ancho*/
     position: relative; /*establece una posicion relativa*/
 
+
+/* usaremos CSS anidado :) */
+
+#contenedor{
+    position: relative;
+    width: 100%vw;
+    height: 550px;
+    background-image: url(../1-2.jpg);
+    background-size: cover;
+    background-position: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    .contenedor-seccion {
+        top: 15.5em;
+        position: relative;
+        background-color: #0028569f;
+        margin-left: 40%;
+        height: 12.7em;
+
+        .seccion-titulos{
+            position: relative;
+            top: 1.6em;
+            left: 2em;
+            color: #fff;
+            
+            .titulos-h1{
+                font-size: 35px;
+                letter-spacing: 1px;
+            }
+            .titulos-h2{
+                font-size: 20px;
+            }
+            
+    }
+        .seccion-boton{
+            position: relative;
+            top:3.5em;
+            width: 14.5em;
+            color: #002856;
+            padding: 1em;
+            background-color:#ffd100;
+            font-weight:  900px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            padding: 0.6em 0.6em;
+            text-align: center;
+            
+            }
+        .seccion-boton:hover{
+            color: #ffd100;
+            padding: 1em;
+            background-color: #002856;
+            position: relative;
+            top:3.5em;
+            width: 14.5em;
+            font-weight:  900px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            padding: 0.6em 0.6em;
+            text-align: center;
+            cursor: pointer;
+        }
+        }
+}
+
     
 }
 
@@ -85,3 +151,4 @@ transform: translateX(0); /* Mueve la imagen para mostrarla completa */
     color:#ffd100;
     
 }
+
