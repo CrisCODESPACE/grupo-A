@@ -1,6 +1,14 @@
 @import "./reset.css";
-
+#platano {
+  background-image: url(/Img/platano-es-01.jpg); /*la imagen de fondo de la section*/
+  background-size: cover; /* hace que la imagen cubra toda la secction*/
+  background-position: center; /* centra la imagen*/
+  background-repeat: no-repeat; /*hace que no se repita*/
+  padding-bottom: 30%; /*crea un relleno proporcional al ancho*/
+  position: relative; /*establece una posicion relativa*/
+}
 /* usaremos CSS anidado :) */
+
 
 /* General */
 body {
@@ -146,4 +154,245 @@ h2 {
   .noticia {
     width: 100%; /* Una columna en pantallas pequeñas */
   }
+=======
+/*Estilos anidados para la sección de recetas de la página plátano de Canarias*/
+
+#cuarta-seccion-recetas {
+  background-image: url(https://platanodecanarias.es/wp-content/uploads/2016/10/pdc-inicio-recetas-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding-bottom: 30px;
+  margin: 20px auto 25px auto;
+
+  .titulo-seccion-recetas > h2 {
+    display: block; /*quiero que ocupe todo el ancho del que dispone y lo demás comience en una nueva línea*/
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    margin: 40px auto;
+  }
+  .articulos-recetas {
+    display: flex;
+    flex-wrap: wrap; /*Quiero que cuando yo haga más grande la pantalla se vean hacia abajo ocupando lo que me permita el ancho de página*/
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+
+    & article {
+      background-color: #fff;
+      height: auto;
+      min-height: 1px;
+      display: flex; /*Cada artículo tiene una disposición flex, en la que su contenido se visualiza en forma de columna*/
+      flex-direction: column;
+      align-items: center;
+      width: 210px;
+      margin-left: 9px;
+      margin-right: 9px;
+      margin-bottom: 40px;
+
+      img {
+        display: block; /*Ocupa el ancho del padre que es el que tiene disponible y comienza el siguiente contenido en una nueva línea*/
+        width: auto;
+        height: auto;
+        margin-bottom: 5px;
+      }
+
+      a > .receta {
+        /*Ruta más específica para llegar a los h3*/
+        display: block;
+        min-height: 60px;
+        max-height: 60px;
+        max-width: 210px;
+        min-width: 209px;
+        color: #002856;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        line-height: 1.1;
+        word-break: break-word; /*me corta la palabra*/
+        /*display: -webkit-box;
+                -webkit-line-clamp: 3;
+                line-clamp: 3;  Limita a 2 líneas de texto (ajustable según tus necesidades) 
+                -webkit-box-orient: vertical;*/
+        overflow: hidden; /*El contenido que se desborda se recorta en el cuadro de relleno del elemento*/
+      }
+
+      /*Con el hover en .receta que es la clase del h3 hago que cuando ponga el cursor el texto se ponga subrayado*/
+      .receta:hover {
+        text-decoration: underline;
+      }
+
+      .boton-receta {
+        display: block; /*Revisar cuando pongo más texto me rueda el botón y como ambos botones están con padding y margin disitntos no están alineados*/
+        color: #002856;
+        background-color: #ffd100;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 5px 10px 5px 10px;
+        text-transform: uppercase;
+        margin-top: 5px;
+        margin-bottom: 20px;
+      }
+
+      /*Con este hover hago el cambio de color de los botones cuando paso el cursor por encima*/
+      .boton-receta:hover {
+        color: #ffd100;
+        background-color: #002856;
+      }
+    }
+  }
+
+  .boton-mas-recetas {
+    display: block;
+    color: #002856;
+    background-color: #ffd100;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 15px 10px 15px;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .boton-mas-recetas:hover {
+    color: #ffd100;
+    background-color: #002856;
+  }
+}
+
+#contenedor {
+  position: relative;
+  width: 100%vw;
+  height: 550px;
+  background-image: url(../Img/1-2.jpg);
+  background-size: cover;
+  background-position: center;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+
+  .contenedor-seccion {
+    top: 15.5em;
+    position: relative;
+    background-color: #0028569f;
+    margin-left: 40%;
+    height: 12.7em;
+
+    .seccion-titulos {
+      position: relative;
+      top: 1.6em;
+      left: 2em;
+      color: #fff;
+
+      .titulos-h1 {
+        font-size: 35px;
+        letter-spacing: 1px;
+      }
+      .titulos-h2 {
+        font-size: 20px;
+      }
+    }
+    .seccion-boton {
+      position: relative;
+      top: 3.5em;
+      width: 14.5em;
+      color: #002856;
+      padding: 1em;
+      background-color: #ffd100;
+      font-weight: 900px;
+      font-size: 13px;
+      letter-spacing: 1px;
+      padding: 0.6em 0.6em;
+      text-align: center;
+    }
+    .seccion-boton:hover {
+      color: #ffd100;
+      padding: 1em;
+      background-color: #002856;
+      position: relative;
+      top: 3.5em;
+      width: 14.5em;
+      font-weight: 900px;
+      font-size: 13px;
+      letter-spacing: 1px;
+      padding: 0.6em 0.6em;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+}
+
+.logo {
+  position: relative; /* Coloca la imagen fuera del flujo normal de la página */
+  top: 20px;
+  left: 0;
+}
+
+.logo:hover {
+  transform: translateX(0); /* Mueve la imagen para mostrarla completa */
+}
+
+.platano-es {
+  background-color: rgba(
+    39,
+    34,
+    99,
+    0.377
+  ); /*aplica un fondo semitransparente*/
+}
+
+.platano-es {
+  position: absolute; /*define una posicion absoluta*/
+  top: 50%;
+  left: 50%;
+  width: 50%;
+}
+
+.ver-mas {
+  color: #0028569f azul;
+  background-color: #ffd100;
+  font-size: 14px; /*ajusta el tamaño del texto*/
+  font-weight: bold; /*engrusa el texto*/
+  padding: 5px 10px 5px 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+.texto {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.point {
+  font-size: 25px;
+  color: rgba(22, 18, 18, 0.466);
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  list-style: none;
+}
+
+.point li {
+  display: inline;
+}
+
+.point-1:hover {
+  color: #ffd100;
+}
+.point-2:hover {
+  color: #ffd100;
+}
+.point-3:hover {
+  color: #ffd100;
+}
+.point-4:hover {
+  color: #ffd100;
 }
